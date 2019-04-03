@@ -34,12 +34,12 @@ original paper: [https://arxiv.org/pdf/1304.3061.pdf](https://arxiv.org/pdf/1304
 ### Algorithm1(QPU)
 
 - Classical Processing Unit(CPU) と Quantum Processing Unit(QPU)を組み合わせることで指数高速化が可能
-- 変分法で固有状態を求める．[変分法](https://github.com/kenjikun/survey-notes/blob/master/variational_method.md)
+- 変分法で固有状態を求める．[変分法](variational_method.md)
 - QPU 上で Hamiltonian の期待値の計算を行い，CPU 上で最適化問題を解く．
 - QPU 上での量子期待値計算
   - 任意の Hamiltonian を
     $$
-    H = \sum_{i\alpha}{h_\alpha^i \sigma_\alpha^i} + \sum_{ij\alpha\beta}{h_{\alpha\beta}^{ij}\sigma_\alpha^i\sigma_\beta^j + \dots}
+    H = \sum_{i\alpha}{h_\alpha^i \sigma_\alpha^i} + \sum_{ij\alpha\beta}h_{\alpha\beta}^{ij}\sigma_\alpha^i\sigma_\beta^j + \dots
     $$
     と展開する．ここで$h$は実数，roman indices は演算子が作用する部分空間を指定，greek indices は Pauli operator を指定．
   - Hamiltonian の期待値は，期待値の線形性より
@@ -51,7 +51,7 @@ original paper: [https://arxiv.org/pdf/1304.3061.pdf](https://arxiv.org/pdf/1304
     - 第二量子化した Hamiltonian の生成消滅演算子を Jordan-Wigner 変換により量子ゲート演算子にマッピングする
       - [第二量子化](https://github.com/kenjikun/survey-notes/blob/master/second_quantization.md)した Hamiltonian
       $$
-      H = \sum_{pq}{h_{pq}\hat{a}_{p}^{\dagger}\hat{a}_{q}}+\sum_{pqrs}{h_{pqrs}\hat{a}_{p}^{\dagger}\hat{a}_{q}^{\dagger}\hat{a}_{r}\hat{a}_{s}}+\dots
+      H = \sum_{pq}{h_{pq}\hat{a}_{p}^{\dagger}\hat{a}_{q}}+\sum_{pqrs}{h_{pqrs}\hat{a}_{p}^{\dagger}\hat{a}_{q}^{\dagger}\hat{a}_{r}\hat{a}_{s}}+ \dots
       $$
       $h$は相互作用係数，$\dots$以降は 3 体以上の相互作用項
       - [Jordan Wigner transformation](https://github.com/kenjikun/survey-notes/blob/master/jordan_wigner_transformation.md)

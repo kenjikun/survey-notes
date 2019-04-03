@@ -1,4 +1,4 @@
 {
-  "plugins": ["katex"],
+  "plugins": ["katex@git+https://github.com/gaoxiaosong/plugin-katex.git"],
   "language": "ja"
 }
