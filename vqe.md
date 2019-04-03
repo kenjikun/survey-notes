@@ -48,7 +48,7 @@ original paper: [https://arxiv.org/pdf/1304.3061.pdf](https://arxiv.org/pdf/1304
     $$
   - Hamiltonian に現れる項の数がシステムのサイズに対して多項式であれば，Hamiltonian の期待値を取るのに必要な計算回数はシステムのサイズに対して多項式
   - このような展開は可能なのか？
-    - 第二量子化した Hamiltonian の生成消滅演算子を Jordan-Wigner 変換により量子ゲート演算子にマッピングする
+    - 第二量子化した Hamiltonian の生成消滅演算子を Jordan-Wigner 変換により量子ゲート演算子にマッピングする
       - [第二量子化](https://github.com/kenjikun/survey-notes/blob/master/second_quantization.md)した Hamiltonian
       $$
       H = \sum_{pq}{h_{pq}\hat{a}_{p}^{\dagger}\hat{a}_{q}}+\sum_{pqrs}{h_{pqrs}\hat{a}_{p}^{\dagger}\hat{a}_{q}^{\dagger}\hat{a}_{r}\hat{a}_{s}}+\dots
