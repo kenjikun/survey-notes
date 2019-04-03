@@ -12,7 +12,7 @@ $$
 まず，$\psi$をエネルギー固有状態$\{\psi_i\}$で展開する．ここで$\{i=1,2,\dots\}$はエネルギー固有状態のラベルである．このとき，Hamiltonian の期待値は
 
 $$
-    \begin{array}{rl}
+    \begin{array}{cc}
         \left<H\right> &=& \sum_{ij}{c_i^* \psi^*_i H c_j \psi_j} \\
         &=& \sum_{i}{|c_i|^2 E_i} \\
         &\geq& E_0 \sum_{i}{|c_i|^2} \\
