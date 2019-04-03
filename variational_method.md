@@ -28,13 +28,13 @@ $$
 
 を得る．
 
-ここで，$\left|\psi\right>$をパラメータ${\bm{\alpha}}=\left(\alpha_0, \alpha_1, \dots, \alpha_n ,\right)^\mathrm{T}$で特徴づけられる試行関数$\left|\phi(\bm{\alpha})\right>=\left|\phi(\alpha_0, \alpha_1, \dots, \alpha_n)\right>$を用いて近似して，
+ここで，$\left|\psi\right>$をパラメータ${\boldsymbol{\alpha}}=\left(\alpha_0, \alpha_1, \dots, \alpha_n ,\right)^\mathrm{T}$で特徴づけられる試行関数$\left|\phi(\boldsymbol{\alpha})\right>=\left|\phi(\alpha_0, \alpha_1, \dots, \alpha_n)\right>$を用いて近似して，
 
 $$
-\frac{\left<\phi(\bm{\alpha})|H|\psi(\bm{\alpha})\right>}{\left<\phi(\bm{\alpha})|\psi(\bm{\alpha})\right>}
+\frac{\left<\phi(\boldsymbol{\alpha})|H|\psi(\boldsymbol{\alpha})\right>}{\left<\phi(\boldsymbol{\alpha})|\psi(\boldsymbol{\alpha})\right>}
 $$
 
-を最小化するような$\bm{\alpha}$を求める．厳密な基底状態$\left|\psi_0\right>$は$(1)$の等号が成り立つ．良い試行関数を選べば選ぶほど$(1)$の右辺は小さくなり，厳密な基底エネルギーに近づく．ここで用いられるパラメータ$\bm{\alpha}$を変分パラメータという．
+を最小化するような$\boldsymbol{\alpha}$を求める．厳密な基底状態$\left|\psi_0\right>$は$(1)$の等号が成り立つ．良い試行関数を選べば選ぶほど$(1)$の右辺は小さくなり，厳密な基底エネルギーに近づく．ここで用いられるパラメータ$\boldsymbol{\alpha}$を変分パラメータという．
 
 ### 例題
 
