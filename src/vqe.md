@@ -1,5 +1,3 @@
-# Variational Quantum Eigen Solver
-
 original paper: [https://arxiv.org/pdf/1304.3061.pdf](https://arxiv.org/pdf/1304.3061.pdf)
 
 ## Abstract
@@ -31,11 +29,12 @@ original paper: [https://arxiv.org/pdf/1304.3061.pdf](https://arxiv.org/pdf/1304
 
 ## Method
 
-### Algorithm1(QPU)
-
 - Classical Processing Unit(CPU) と Quantum Processing Unit(QPU)を組み合わせることで指数高速化が可能
 - 変分法で固有状態を求める．[変分法](variational_method.md)
 - QPU 上で Hamiltonian の期待値の計算を行い，CPU 上で最適化問題を解く．
+
+### Algorithm1(QPU)
+
 - QPU 上での量子期待値計算
   - 任意の Hamiltonian を
     $$
