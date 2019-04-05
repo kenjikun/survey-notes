@@ -1,13 +1,8 @@
 version: 2
-executors:
-  default:
-    docker:
-      - image: circleci/node:8.11.4
 
 jobs:
   deploy:
-    executor:
-      name: default
+    machine: true
     steps:
       - checkout
       - run:
@@ -27,10 +22,10 @@ jobs:
             git push --force git@github.com:USER/REPO.git gh-pages
 
 workflows:
+  version: 2
   setup_and_deploy:
     jobs:
       - deploy:
-          name: update docs
           filters:
             branches:
               only: master
