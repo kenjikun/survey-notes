@@ -72,11 +72,24 @@ original paper: [https://arxiv.org/pdf/1304.3061.pdf](https://arxiv.org/pdf/1304
 
 ### Algorithm2(CPU)
 
-- QPU を使って Hamiltonian の期待値を求めるために，基底状態の波動関数をよく近似する必要がある → [Rayleigh-Ritz](https://github.com/kenjikun/survey-notes/blob/master/variational_method.md)
-- 波動関数が多項式の数のパラメータで特徴づけられれば，多項式次元の空間を探索すればいい
+- パラメータを変化させてエネルギーが最小になるように仕向ける．ここに関しては classical な最適化手法を使えばいい．
+  - この論文では Nelder-Mead method を用いている．導関数が不要
+  - 単純な最急降下法だと導関数が必要
+- 波動関数が多項式の数のパラメータで特徴づけられれば，多項式次元の空間を探索すればいいので，そういったタイプの試行関数を利用する．
+- この論文では"unitary coupled cluster ansatz"[1]を用いている．これの詳細よくわからない...量子化学計算界隈ではよく使われる？
+  $$
+  \left|\Psi\right> = e^{T-T^{\dag}} \left| \Phi \right>_{\mathrm{ref}}
+  $$
+  - $\left|\Phi\right>_{\mathrm{ref}}$は Hartree Fock の時の ground state を用いる．
+    - Hartree Fock で近似すると ground state は古典でも効率よく求められるそこに電子相関を考慮した分が乗るようにしていると考えられる．
+  - unitary coupled cluster ansatz は古典で効率よく計算できる方法は知られていない．
 
 ## Discussion
 
 - ゲート数は少なくてすむ
+- コヒーレンスを維持するのは Hamiltonian の期待値計算の間だけ
 - ansatz は興味のある system の知識に基づいて選ぶ必要がある
-  - 量子化学計算等ではそういった ansatz はあるみたいだが，他の問題をマップした場合にどうなるか
+  - 量子化学計算等ではそういった ansatz はあるみたい(unitary coupled cluster ansatz)だが，他の問題をマップした場合にどうなるか
+  - ある程度厳密解なり近似解がすでに効率よく求められるモデルから出発して多体効果をパラメータ化して取り入れるのが正攻法な気がする．
+
+[1]: https://doi.org/10.1002/qua.21198
