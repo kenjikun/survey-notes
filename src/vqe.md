@@ -36,9 +36,10 @@ original paper: [https://arxiv.org/pdf/1304.3061.pdf](https://arxiv.org/pdf/1304
 ### Algorithm1(QPU)
 
 - QPU 上での量子期待値計算
+
   - 任意の Hamiltonian を
     $$
-    H = \sum_{i\alpha}{h_\alpha^i \sigma_\alpha^i} + \sum_{ij\alpha\beta}h_{\alpha\beta}^{ij}\sigma_\alpha^i\sigma_\beta^j + \dots
+    H = \sum_{i\alpha}{h_\alpha^i \sigma_\alpha^i} + \sum_{ij\alpha\beta}h_{\alpha\beta}^{ij}\sigma_\alpha^i\sigma_\beta^j + \dots \tag{1}
     $$
     と展開する．ここで$h$は実数，roman indices は演算子が作用する部分空間を指定，greek indices は Pauli operator を指定．
   - Hamiltonian の期待値は，期待値の線形性より
@@ -47,13 +48,27 @@ original paper: [https://arxiv.org/pdf/1304.3061.pdf](https://arxiv.org/pdf/1304
     $$
   - Hamiltonian に現れる項の数がシステムのサイズに対して多項式であれば，Hamiltonian の期待値を取るのに必要な計算回数はシステムのサイズに対して多項式
   - このような展開は可能なのか？
-    - 第二量子化した Hamiltonian の生成消滅演算子を Jordan-Wigner 変換により量子ゲート演算子にマッピングする
-      - [第二量子化](https://github.com/kenjikun/survey-notes/blob/master/second_quantization.md)した Hamiltonian
+
+    - 第二量子化した Hamiltonian の生成消滅演算子を Jordan-Wigner 変換により量子ゲート演算子(Pauli 演算子)にマッピングする
+
+      - ここでは，量子化学計算を考える．Born Oppenheimer 近似を行い，[第二量子化](https://github.com/kenjikun/survey-notes/blob/master/second_quantization.md)した Hamiltonian は
+
       $$
-      H = \sum_{pq}{h_{pq}\hat{a}_{p}^{\dagger}\hat{a}_{q}}+\sum_{pqrs}{h_{pqrs}\hat{a}_{p}^{\dagger}\hat{a}_{q}^{\dagger}\hat{a}_{r}\hat{a}_{s}}+ \dots
+      H = \sum_{pq}{h_{pq}\hat{a}_{p}^{\dagger}\hat{a}_{q}}+\sum_{pqrs}{h_{pqrs}\hat{a}_{p}^{\dagger}\hat{a}_{q}^{\dagger}\hat{a}_{r}\hat{a}_{s}}
       $$
-      $h$は相互作用係数，$\dots$以降は 3 体以上の相互作用項
+
+      となる．$h_{pq}, h_{pqrs}$は定数となる．この Hamiltonian はどの準位にいくつ粒子があるか？で状態を記述している(数表示)．実際の量子化学系では軌道の数は無限大であるため，Hamiltonian の次元数は無限大になる．ただし，興味のある軌道はせいぜい数軌道〜数十軌道程度なのでそこで軌道を打ち切り，有限自由度系として扱う．([第二量子化](https://github.com/kenjikun/survey-notes/blob/master/second_quantization.md)を参照)
+
       - [Jordan Wigner transformation](https://github.com/kenjikun/survey-notes/blob/master/jordan_wigner_transformation.md)
+
+      $$
+      \begin{array}{rl}
+        \hat{a}_j &\rightarrow& I^{\bigotimes j-1}\bigotimes \sigma_+ \bigotimes \sigma_z^{\bigotimes N-j} \\
+        \hat{a}_j^\dag &\rightarrow& I^{\bigotimes j-1}\bigotimes \sigma_- \bigotimes \sigma_z^{\bigotimes N-j} \tag{1}
+      \end{array}
+      $$
+
+      により，$N$準位の Fermion 系を$N$個のスピン$1/2$系で記述することができる．これを用いると$(1)$が得られる．
 
 ### Algorithm2(CPU)
 
