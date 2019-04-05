@@ -5,21 +5,19 @@ jobs:
     machine: true
     steps:
       - checkout
-      - run:
-          name: install dependencies
-          command: |
-            npm install gitbook-cli
-            git config --global user.name kenjikun
-            git config --global user.email knj.luxt@gmail.com
-            ./node_modules/gitbook-cli/bin/gitbook.js install src
-            ./node_modules/gitbook-cli/bin/gitbook.js build src docs
-            cd docs
-            git init
-            git commit --allow-empty -m '[ci skip] update docs'
-            git checkout -b gh-pages
-            git add .
-            git commit -am '[ci skip] update docs'
-            git push --force git@github.com:kenjikun/survey-notes.git gh-pages
+      - run: |
+          npm install gitbook-cli
+          git config --global user.name kenjikun
+          git config --global user.email knj.luxt@gmail.com
+          ./node_modules/gitbook-cli/bin/gitbook.js install src
+          ./node_modules/gitbook-cli/bin/gitbook.js build src docs
+          cd docs
+          git init
+          git commit --allow-empty -m '[ci skip] update docs'
+          git checkout -b gh-pages
+          git add .
+          git commit -am '[ci skip] update docs'
+          git push --force git@github.com:kenjikun/survey-notes.git gh-pages
 
 workflows:
   version: 2
