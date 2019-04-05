@@ -1,3 +1,6 @@
-# Survey Notes
+# Notes
 
-- [Mathjax Plugin for Github](https://chrome.google.com/webstore/detail/mathjax-plugin-for-github/ioemnmodlmafdkllaclgeombjnmnbima)
+調べたことをおいておく
+
+- [Variational Quantum Eigensolver](vqe.md)
+- [Variational Method](variational_method.md)
