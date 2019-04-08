@@ -125,6 +125,66 @@ $$
 
 **生成消滅演算子による表示に移行することを第二量子化という**
 
+### 場の演算子
+
+場の演算子を
+
+$$
+\hat{\psi}^\dag(\bm{r}) = \sum_{k}{\phi_k^*(\bm{r}) \hat{a}_k^\dag}
+$$
+
+と定義する．このとき，直交性を用いると
+
+$$
+    \hat{a}_k^\dag = \int{d\bm{r}\phi_k(\bm{r})}\hat{\psi}^\dag(\bm{r})
+$$
+
+と表せるから，Hamiltonian は
+
+$$
+\begin{array}{rl}
+    H &=& \sum_{k}\epsilon_k\int{d\bm{r} d\bm{r}' \phi_k(\bm{r}) \phi_k^*(\bm{r}') \hat{\psi}^\dag(\bm{r})\hat{\psi}(\bm{r}')}\\
+    &=& \int{d\bm{r}\hat{\psi}^\dag(\bm{r})\sum_{k}\phi_k^*(\bm{r})\hat{h}(\bm{r})\phi_k(\bm{r})\hat{\psi}(\bm{r})} \\
+    &=& \int{d\bm{r}\hat{\psi}^\dag(\bm{r})\left(-\frac{\hbar^2}{2m}\nabla^2+v(\bm{r})\right)\hat{\psi}(\bm{r})}
+\end{array}
+$$
+
+となる．ここで一粒子 Hamiltonian $h(\bm{r})=-\frac{\hbar^2}{2m}\nabla^2+v(\bm{r})$が
+
+$$
+h(\bm{r})\phi_k(\bm{r}) = \epsilon_k \phi_k(\bm{r})
+$$
+
+を満たすことを使った．
+
+これにより，場の演算子を用いて Hamiltonian を表すことができた．場の演算子による Hamiltonian の表示は第一量子化のエネルギーの期待値計算を波動関数の代わりに演算子を用いて表示した形をしている．
+
 ## 相互作用がある場合
 
-ここまで相互作用がない場合，つまり自由粒子の場合を考えてきた．残るは相互作用が第二量子化によってどう表せられるかである．
+上記では相互作用がない場合，つまり自由粒子の場合を考えてきた．ここでは相互作用がある Hamiltonian に対して第二量子化を行った場合にどうなるかを見る．
+
+第一量子化での一粒子演算子$F$と二粒子演算子(二体相互作用)$G$は
+
+$$
+F = \sum_{i=1}^{N}{f(\bm{r}_i)}
+$$
+
+$$
+G = \frac{1}{2}\sum_{i\neq j}{g(\bm{r}_i, \bm{r}_j)}
+$$
+
+と書ける．
+
+$$
+    \hat{F} = \int{d\bm{r}\hat{\psi}^\dag(\bm{r})f(\bm{r})}\hat{\psi}(\bm{r})
+$$
+
+の行列要素$\left<\alpha\right|\hat{F}\left|\beta\right>$を計算すると一粒子演算子$F$には$\hat{F}$を対応させればいいことがわかる(計算は省略)
+
+同様に
+
+$$
+    \hat{G} = \frac{1}{2}\int{d\bm{r}d\bm{r}'\hat{\psi}^\dag(\bm{r})\hat{\psi}^\dag(\bm{r}')g(\bm{r}, \bm{r}')}\hat{\psi}(\bm{r})\hat{\psi}(\bm{r}')
+$$
+
+の行列要素$\left<\alpha\right|\hat{G}\left|\beta\right>$を計算すると一粒子演算子$G$には$\hat{G}$を対応させればいいことがわかる(計算は省略)
