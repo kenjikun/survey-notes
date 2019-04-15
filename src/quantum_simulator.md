@@ -31,4 +31,4 @@ pyQuil は以下を参考にしている．
   - $H \left|0\right>$に対して$0.707106812\left|0\right> +  0.707106812\left|1\right>$を出力できる．
 - [grove](https://github.com/rigetti/grove)を使うといくつかの Quantum algorithms が利用可能
 
-- 簡単な実装例 [notebook](https://github.com/kenjikun/survey-notes/src/blob/master/pyquil.ipynb)
+- 簡単な実装例 [pyquil.ipynb](https://github.com/kenjikun/survey-notes/blob/master/src/pyquil.ipynb)
