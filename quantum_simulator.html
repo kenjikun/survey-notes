@@ -1,0 +1,349 @@
+
+<!DOCTYPE HTML>
+<html lang="ja" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Quantum Simulator · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-katex/katex.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="jordan_wigner_transformation.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="検索すると入力" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="vqe.html">
+            
+                <a href="vqe.html">
+            
+                    
+                    Variational Quantum Eigensolver
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="variational_method.html">
+            
+                <a href="variational_method.html">
+            
+                    
+                    Variational Method
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="second_quantization.html">
+            
+                <a href="second_quantization.html">
+            
+                    
+                    Second Quantization
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="jordan_wigner_transformation.html">
+            
+                <a href="jordan_wigner_transformation.html">
+            
+                    
+                    Jordan Wigner Transformation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.6" data-path="quantum_simulator.html">
+            
+                <a href="quantum_simulator.html">
+            
+                    
+                    Quantum Simulator
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            GitBookで公開 
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >Quantum Simulator</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="quantum-simulator">Quantum simulator</h1>
+<ul>
+<li>Rigetti pyQuil</li>
+<li>Microsoft Q#</li>
+<li>QunaSys qulacs
+&#x306E; 3 &#x3064;&#x3092;&#x8A66;&#x3057;&#x3066;&#x307F;&#x308B;&#xFF0E;</li>
+</ul>
+<h2 id="&#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;">&#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;</h2>
+<ul>
+<li>pyQuil<ul>
+<li><a href="https://pyquil.readthedocs.io/en/latest/start.html" target="_blank">https://pyquil.readthedocs.io/en/latest/start.html</a></li>
+<li>puQUil &#x4EE5;&#x5916;&#x306B;&#x3082; qvm(virtual machine), quilc(complier)&#x306E;&#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;&#x304C;&#x5FC5;&#x8981;</li>
+</ul>
+</li>
+<li>Q#<ul>
+<li><a href="https://docs.microsoft.com/en-us/quantum/install-guide/?view=qsharp-preview" target="_blank">https://docs.microsoft.com/en-us/quantum/install-guide/?view=qsharp-preview</a></li>
+<li>jupyter &#x3067;&#x3084;&#x308B;&#x306A;&#x3089;&#x3053;&#x3063;&#x3061; <a href="https://github.com/Microsoft/Quantum/blob/master/Samples/src/IntroToIQSharp/Notebook.ipynb" target="_blank">https://github.com/Microsoft/Quantum/blob/master/Samples/src/IntroToIQSharp/Notebook.ipynb</a></li>
+<li>Q#&#x306E;&#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;&#x306E;&#x524D;&#x306B; .NET Core SDK(2.1 or later)&#x304C;&#x5FC5;&#x8981;</li>
+</ul>
+</li>
+<li>qulacs<ul>
+<li><a href="https://github.com/qulacs/qulacs" target="_blank">https://github.com/qulacs/qulacs</a></li>
+<li>pip install &#x306E;&#x969B;&#x306B; gcc &#x3067; compile &#x3057;&#x3066;&#x3044;&#x308B;&#xFF0E;mac &#x3060;&#x3068; gcc &#x30B3;&#x30DE;&#x30F3;&#x30C9;&#x304C; clang &#x3092;&#x547C;&#x3076;&#x3088;&#x3046;&#x306B;&#x306A;&#x3063;&#x3066;&#x3044;&#x308B;&#x306E;&#x3067;&#x30A8;&#x30A4;&#x30EA;&#x30A2;&#x30B9;&#x3092;&#x5909;&#x66F4;&#x3057;&#x3066;&#x304A;&#x304F;&#x5FC5;&#x8981;&#x304C;&#x3042;&#x308B;&#xFF0E;</li>
+</ul>
+</li>
+</ul>
+<h2 id="multi-qubit-&#x306E;&#x4E26;&#x3079;&#x65B9;">multi qubit &#x306E;&#x4E26;&#x3079;&#x65B9;</h2>
+<p>pyQuil &#x306F;&#x4EE5;&#x4E0B;&#x3092;&#x53C2;&#x8003;&#x306B;&#x3057;&#x3066;&#x3044;&#x308B;&#xFF0E;
+<a href="https://arxiv.org/abs/1711.02086" target="_blank">SOMEONE SHOUTS, <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo fence="true">&#x2223;</mo><mn>01000</mn><mo fence="true">&gt;</mo></mrow><annotation encoding="application/x-tex">\left|01000\right&gt;</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="minner"><span class="mopen delimcenter" style="top:0em;">&#x2223;</span><span class="mord">0</span><span class="mord">1</span><span class="mord">0</span><span class="mord">0</span><span class="mord">0</span><span class="mclose delimcenter" style="top:0em;">&#x27E9;</span></span></span></span></span>! WHO IS EXCITED?</a></p>
+<h2 id="rigetti-pyquil">Rigetti pyQuil</h2>
+<ul>
+<li>shell &#x3092; 2 &#x3064;&#x7ACB;&#x3061;&#x4E0A;&#x3052;&#x3066; qvm &#x3068; quilc &#x3092;&#x8D70;&#x3089;&#x305B;&#x3066;&#x304A;&#x304F;
+<code>qvm -S</code>
+<code>quilc -S</code></li>
+<li>&#x30C7;&#x30D0;&#x30C3;&#x30B0;&#x7528;&#x306B;&#x6CE2;&#x52D5;&#x95A2;&#x6570;&#x30B7;&#x30DF;&#x30E5;&#x30EC;&#x30FC;&#x30BF;&#x304C;&#x5229;&#x7528;&#x53EF;&#x80FD;<ul>
+<li>&#x4F8B;&#x3048;&#x3070;<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>H</mi><mrow><mo fence="true">&#x2223;</mo><mn>0</mn><mo fence="true">&gt;</mo></mrow></mrow><annotation encoding="application/x-tex">H \left|0\right&gt;</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathit" style="margin-right:0.08125em;">H</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="minner"><span class="mopen delimcenter" style="top:0em;">&#x2223;</span><span class="mord">0</span><span class="mclose delimcenter" style="top:0em;">&#x27E9;</span></span></span></span></span>&#x306B;&#x5BFE;&#x3057;&#x3066;<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>0.707106812</mn><mrow><mo fence="true">&#x2223;</mo><mn>0</mn><mo fence="true">&gt;</mo></mrow><mo>+</mo><mn>0.707106812</mn><mrow><mo fence="true">&#x2223;</mo><mn>1</mn><mo fence="true">&gt;</mo></mrow></mrow><annotation encoding="application/x-tex">0.707106812\left|0\right&gt; +  0.707106812\left|1\right&gt;</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">0</span><span class="mord">.</span><span class="mord">7</span><span class="mord">0</span><span class="mord">7</span><span class="mord">1</span><span class="mord">0</span><span class="mord">6</span><span class="mord">8</span><span class="mord">1</span><span class="mord">2</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="minner"><span class="mopen delimcenter" style="top:0em;">&#x2223;</span><span class="mord">0</span><span class="mclose delimcenter" style="top:0em;">&#x27E9;</span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">0</span><span class="mord">.</span><span class="mord">7</span><span class="mord">0</span><span class="mord">7</span><span class="mord">1</span><span class="mord">0</span><span class="mord">6</span><span class="mord">8</span><span class="mord">1</span><span class="mord">2</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="minner"><span class="mopen delimcenter" style="top:0em;">&#x2223;</span><span class="mord">1</span><span class="mclose delimcenter" style="top:0em;">&#x27E9;</span></span></span></span></span>&#x3092;&#x51FA;&#x529B;&#x3067;&#x304D;&#x308B;&#xFF0E;</li>
+</ul>
+</li>
+<li><p><a href="https://github.com/rigetti/grove" target="_blank">grove</a>&#x3092;&#x4F7F;&#x3046;&#x3068;&#x3044;&#x304F;&#x3064;&#x304B;&#x306E; Quantum algorithms &#x304C;&#x5229;&#x7528;&#x53EF;&#x80FD;</p>
+</li>
+<li><p>&#x7C21;&#x5358;&#x306A;&#x5B9F;&#x88C5;&#x4F8B; <a href="https://github.com/kenjikun/survey-notes/blob/master/src/pyquil.ipynb" target="_blank">pyquil.ipynb</a></p>
+</li>
+</ul>
+<h2 id="microsoft-qsharp">Microsoft Qsharp</h2>
+<ul>
+<li>jupyter-lab &#x3060;&#x3068;&#x52D5;&#x304B;&#x306A;&#x3044;<ul>
+<li>jupyter notebook &#x3067; Q#&#x30AB;&#x30FC;&#x30CD;&#x30EB;&#x3092;&#x4F7F;&#x3048;&#x3070; OK</li>
+</ul>
+</li>
+<li>visual studio &#x3084;&#x3089; visual studio code &#x3067;&#x3082;&#x66F8;&#x3051;&#x308B;&#xFF0E;</li>
+<li>Q#&#x306E; jupyter tutorial &#x306E;&#x65E5;&#x672C;&#x8A9E;&#x8A33;<a href="https://github.com/kenjikun/survey-notes/blob/master/src/qsharp.ipynb" target="_blank">Q# notebooks</a></li>
+<li>&#x3067;&#x3082;&#x4ECA;&#x306E;&#x3068;&#x3053;&#x308D;&#x306F; Visual Studio &#x304B; Visual Studio Code &#x3067;&#x66F8;&#x304F;&#x307B;&#x3046;&#x304C;&#x66F8;&#x304D;&#x3084;&#x3059;&#x3044;&#xFF0E;(&#x88DC;&#x5B8C;&#x5229;&#x304B;&#x306A;&#x3044;)</li>
+<li>&#x95A2;&#x6570;&#x578B;&#x3063;&#x307D;&#x3044;&#x8A00;&#x8A9E;&#x4ED5;&#x69D8;</li>
+<li>Q#&#x306F;&#x91CF;&#x5B50;&#x8A08;&#x7B97;&#x90E8;&#x5206;&#x3060;&#x3051;&#x3092;&#x62C5;&#x5F53;&#x3057;&#x3066;&#xFF0C;C#&#x3084;&#x3089; Python &#x3067;&#x53E4;&#x5178;&#x8A08;&#x7B97;&#x90E8;&#x5206;&#x3092;&#x62C5;&#x5F53;&#x3059;&#x308B;&#xFF0E;</li>
+<li>Driver &#x304C;&#x8A2D;&#x5B9A;&#x3067;&#x304D;&#x3066;&#x3044;&#x308C;&#x3070; Q#&#x5074;&#x306E;&#x30B3;&#x30FC;&#x30C9;&#x3092;&#x3044;&#x3058;&#x308B;&#x3053;&#x3068;&#x306A;&#x304F; IBM Q &#x3067;&#x52D5;&#x304B;&#x305B;&#x308B;&#x3089;&#x3057;&#x3044;<a href="https://tech.tanaka733.net/entry/2018/12/running-qsharp-in-ibmq" target="_blank">https://tech.tanaka733.net/entry/2018/12/running-qsharp-in-ibmq</a></li>
+</ul>
+<h2 id="qunasys-qulacs">Qunasys Qulacs</h2>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="jordan_wigner_transformation.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: Jordan Wigner Transformation">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Quantum Simulator","level":"1.6","depth":1,"previous":{"title":"Jordan Wigner Transformation","level":"1.5","depth":1,"path":"jordan_wigner_transformation.md","ref":"jordan_wigner_transformation.md","articles":[]},"dir":"ltr"},"config":{"plugins":["katex@git+https://github.com/gaoxiaosong/plugin-katex.git"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"katex":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"ja","gitbook":"*"},"file":{"path":"quantum_simulator.md","mtime":"2019-04-17T06:37:41.605Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-04-17T06:38:41.081Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
