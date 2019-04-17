@@ -12,6 +12,7 @@
   - puQUil 以外にも qvm(virtual machine), quilc(complier)のインストールが必要
 - Q#
   - https://docs.microsoft.com/en-us/quantum/install-guide/?view=qsharp-preview
+  - jupyter でやるならこっち https://github.com/Microsoft/Quantum/blob/master/Samples/src/IntroToIQSharp/Notebook.ipynb
   - Q#のインストールの前に .NET Core SDK(2.1 or later)が必要
 - qulacs
   - https://github.com/qulacs/qulacs
@@ -28,7 +29,14 @@ pyQuil は以下を参考にしている．
   `qvm -S`
   `quilc -S`
 - デバッグ用に波動関数シミュレータが利用可能
-  - $H \left|0\right>$に対して$0.707106812\left|0\right> +  0.707106812\left|1\right>$を出力できる．
+  - 例えば$H \left|0\right>$に対して$0.707106812\left|0\right> +  0.707106812\left|1\right>$を出力できる．
 - [grove](https://github.com/rigetti/grove)を使うといくつかの Quantum algorithms が利用可能
 
 - 簡単な実装例 [pyquil.ipynb](https://github.com/kenjikun/survey-notes/blob/master/src/pyquil.ipynb)
+
+## Q
+
+- jupyter-lab だと動かない
+  - jupyter notebook で Q#カーネルを使えば OK
+- visual studio やら visual studio code でも書ける．
+- Q#の jupyter tutorial の日本語訳[Q# notebooks](https://github.com/kenjikun/survey-notes/blob/master/src/qsharp.ipynb)
